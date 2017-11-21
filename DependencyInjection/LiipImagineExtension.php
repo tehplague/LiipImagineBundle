@@ -98,7 +98,7 @@ class LiipImagineExtension extends Extension
         $container->setParameter('liip_imagine.controller.redirect_response_code', $config['controller']['redirect_response_code']);
 
         $resources = $container->hasParameter('twig.form.resources') ? $container->getParameter('twig.form.resources') : array();
-        $resources[] = 'LiipImagineBundle:Form:form_div_layout.html.twig';
+        $resources[] = '@LiipImagine/Form/form_div_layout.html.twig';
         $container->setParameter('twig.form.resources', $resources);
     }
 
